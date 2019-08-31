@@ -24,7 +24,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "node ./scripts/generate_current_time & git add ./docs/_src/last_commit.js"
+      "pre-commit": "node ./scripts/generate_current_time & git add ./docs/last_commit.js"
     }
   }
 }
