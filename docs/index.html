@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stars</title>
+  <link rel="shortcut icon" href="./_src/assets/star.png" />
+  <link rel="icon" href="./_src/assets/star.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="_src/css/style.css">
+
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: `Ciel s Galaxy ☆★☆`,
+      // repo: 'https://github.com/ls-morning/stars',
+      loadSidebar: 'contents.md',
+      autoHeader: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      homepage: 'README.md',
+      themeColor: '#87CEFA',
+      // logo: './star.svg',
+      // search: 'auto',
+
+      // formatUpdated: function(time) {
+      //   console.log(time);
+      //   return time;
+      // },
+      plugins: [
+        function(hook, vm) {
+          const format_date = (i) => i > 9 ? `${i}` : `0${i}`;
+          hook.mounted(function() {
+            const last_updated_div = document.createElement('div');
+            const date = new Date(last_commit_date);
+            last_updated_div.innerHTML = 
+              `Lastest Commit 
+              <a title="${date}">
+                @ ${date.getFullYear()} / ${format_date(date.getMonth() + 1)} / ${format_date(date.getDate())}
+              </a>`;
+            last_updated_div.classList.add('last-updated');
+            document.querySelector('.sidebar')
+              .insertBefore(last_updated_div, document.querySelector('.sidebar-nav'));
+          });
+        }
+      ],
+    }
+  </script>
+  <script src="./_src/last_commit.js"></script>
+  <script src="./_src/libs/docsify.min.js"></script>
+  <script src="./_src/libs/docsify-copy-code.js"></script>
+  <!-- <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script> -->
+  <!-- <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script> -->
+</body>
+
+</html>

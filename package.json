@@ -1,0 +1,30 @@
+{
+  "name": "ciels-stars",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docsify serve docs --port 1009"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ls-morning/stars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ls-morning/stars/issues"
+  },
+  "homepage": "https://github.com/ls-morning/stars#readme",
+  "dependencies": {
+    "docsify": "^4.9.4"
+  },
+  "devDependencies": {
+    "husky": "^3.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node ./scripts/generate_current_time & git add ./docs/_src/last_commit.js"
+    }
+  }
+}
