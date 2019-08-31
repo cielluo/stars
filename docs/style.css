@@ -1,4 +1,4 @@
-@import url(./fonts.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600|Livvic:400|Noto+Sans+SC&display=swap");
 * {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -6,6 +6,23 @@
   -webkit-text-size-adjust: none;
   -webkit-touch-callout: none;
   box-sizing: border-box
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 2.5px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 body:not(.ready) {
@@ -262,6 +279,7 @@ main.hidden {
   padding: 0 15px;
   text-align: center;
 }
+
 .sidebar>h1:after {
   content: "";
   position: absolute;
@@ -269,7 +287,7 @@ main.hidden {
   left: 25px;
   height: 2px;
   width: calc(100% - 50px);
-  background: linear-gradient(70deg,#0ebeff,#ffdd40,#ae63e4,#47cf73);
+  background: linear-gradient(70deg, #0ebeff, #ffdd40, #ae63e4, #47cf73);
 }
 
 .sidebar>h1 a {
@@ -292,6 +310,7 @@ main.hidden {
 }
 
 /* 一级标签 */
+
 .sidebar .sidebar-nav>ul>li>ul>li>a {
   border-bottom: 2px solid transparent;
 }
@@ -313,6 +332,7 @@ main.hidden {
 }
 
 /* 分类标题 */
+
 .sidebar li>p {
   font-weight: 520;
   margin: 0;
