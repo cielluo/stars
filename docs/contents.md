@@ -11,3 +11,7 @@
 * 日常
   * [非技术问题](stars/daily/non-tech.md)
   * [Markdown](stars/daily/markdown.md)
+  * [Git](stars/daily/git.md)
+
+* TypeScript
+  * [Mapped Types](stars/typescript/mapped-type.md)
