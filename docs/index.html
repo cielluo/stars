@@ -40,8 +40,8 @@
             const last_updated_div = document.createElement('div');
             const date = new Date(last_commit_date);
             last_updated_div.innerHTML = 
-              `Lastest Commit 
-              <a title="${date}">
+              `Updated 
+              <a title="${date}" href="https://github.com/ls-morning/stars">
                 @ ${date.getFullYear()} / ${format_date(date.getMonth() + 1)} / ${format_date(date.getDate())}
               </a>`;
             last_updated_div.classList.add('last-updated');
