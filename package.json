@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ls-morning/stars#readme",
   "dependencies": {
-    "docsify": "^4.9.4"
+    "docsify": "^4.12.0"
   },
   "devDependencies": {
     "husky": "^3.0.4"
